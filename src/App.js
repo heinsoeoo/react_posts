@@ -21,6 +21,9 @@ const themeLight = createTheme({
     palette: {
         background: {
             default: "#fff9e0",
+        },
+        primary: {
+            main: "#41251d",
         }
     }
 })

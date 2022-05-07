@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const AppHeader = () => (
     <>
-        <AppBar position='fixed' sx={{ backgroundColor: '#41251d' }}>
+        <AppBar position='fixed'>
             <Toolbar>
                 <IconButton edge="start" color="inherit" aria-label="menu">
                     <FeedOutlined/>
