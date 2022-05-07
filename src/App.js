@@ -6,6 +6,9 @@ import PostDetail from './pages/PostDetail';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import { styled } from '@mui/system';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { CssBaseline } from '@mui/material';
+// import { ThemeProvider } from '@mui/styles';
 
 const ContentWrap = styled('div')(({theme}) => ({
     padding: "20px 80px 0 80px",
@@ -14,9 +17,19 @@ const ContentWrap = styled('div')(({theme}) => ({
     }
 }));
 
+const themeLight = createTheme({
+    palette: {
+        background: {
+            default: "#fff9e0",
+        }
+    }
+})
+
 function App() {
     return (
         <Fragment>
+            <ThemeProvider theme={themeLight}>
+                <CssBaseline/>
             <Router>
                 <AppHeader/>
                 <ContentWrap>
@@ -27,6 +40,7 @@ function App() {
                         </Routes>
                 </ContentWrap>
             </Router>
+            </ThemeProvider>
         </Fragment>
         
     );
